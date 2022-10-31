@@ -22,14 +22,6 @@ body {
     height: 100vh;
 }
 
-.password {
-
-}
-
-.password-button {
-     
-}
-
 .password-button {
     min-width: 100px;
     font-family: inherit;
@@ -41,6 +33,7 @@ body {
     padding: 8px 16px;
     font-size: 1rem;
     cursor: pointer;
+    margin-top: 10px;
   }
   
 .password-button:hover {
