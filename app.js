@@ -28,7 +28,7 @@ const generateBtn = document.createElement('button');
 generateBtn.classList.add('password-button');
 generateBtn.innerText = 'Сгенерировать';
 generateBtn.addEventListener('click', (e) => {
-    let password = generatePassword(12);
+    let password = generatePassword(15);
     passwordEl.value = password;
 });
 
@@ -36,8 +36,9 @@ function generatePassword(passwordLength) {
     const numberChars = "0123456789";
     const upperChars = "QWERTYUIOPASDFGHJKLZXCVBNM";
     const lowerChars = "qwertyuiopasdfghjklzxcvbnm";
+    const downsymbolChars = "}~#*>>!$\?_+.\~";
     const symbolChars = "!@#$%^&*()_+=";
-    const allChars = numberChars + upperChars + lowerChars + symbolChars;
+    const allChars = numberChars + upperChars + lowerChars + symbolChars + downsymbolChars;
 
     let randomString = '';
 
