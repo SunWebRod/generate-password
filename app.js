@@ -11,6 +11,7 @@ passwordEl.addEventListener('focus', (e) => {
     passwordEl.setSelectionRange(0, 99999);
 
     navigator.clipboard.writeText(passwordEl.value);
+    alert("Текст скопирован!");
 });
 
 const copyBtn = document.createElement('button'); // создаем кнопку скопировать
@@ -32,7 +33,7 @@ generateBtn.addEventListener('click', (e) => {
     passwordEl.value = password;
 });
 
-function generatePassword(passwordLength) {
+function generatePassword(passwordLength) { // алгоритм генерации пароля
     const numberChars = "0123456789";
     const upperChars = "QWERTYUIOPASDFGHJKLZXCVBNM";
     const lowerChars = "qwertyuiopasdfghjklzxcvbnm";

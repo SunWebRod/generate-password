@@ -34,10 +34,12 @@ body {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 10px;
+    transition: transform .3s;
   }
   
 .password-button:hover {
     background: #1d49aa;
+    transform: translateY(-3px);
 }
   
 .password-button:focus {
