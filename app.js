@@ -25,13 +25,21 @@ copyBtn.addEventListener('click', (e) => {
   navigator.clipboard.writeText(passwordEl.value);
 });
 
+let range = document.querySelector('.number');
+let rangeNum = document.querySelector('.range-num');
+
 const generateBtn = document.createElement('button');
 generateBtn.classList.add('password-button');
 generateBtn.innerText = 'Сгенерировать';
-generateBtn.addEventListener('click', (e) => {
-    let password = generatePassword(15);
+
+range.oninput = function() {
+    rangeNum.style.left = this.value + "px";
+    rangeNum.innerHTML = this.value;
+    generateBtn.addEventListener('click', (e) => {
+    let password = generatePassword(this.value);
     passwordEl.value = password;
 });
+}
 
 function generatePassword(passwordLength) { // алгоритм генерации пароля
     const numberChars = "0123456789";
