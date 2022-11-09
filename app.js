@@ -41,7 +41,10 @@ range.oninput = function() {
 });
 }
 
-function generatePassword(passwordLength) { // алгоритм генерации пароля
+let iziNO = document.querySelector('.order');
+
+    function generatePassword(passwordLength) { // алгоритм генерации пароля
+    if (iziNO.checked) {
     const numberChars = "0123456789";
     const upperChars = "QWERTYUIOPASDFGHJKLZXCVBNM";
     const lowerChars = "qwertyuiopasdfghjklzxcvbnm";
@@ -57,6 +60,21 @@ function generatePassword(passwordLength) { // алгоритм генераци
     }
 
     return randomString;
+} else {
+    const numberChars = "0123456789";
+    const upperChars = "QWERTYUIOPASDFGHJKLZXCVBNM";
+    const lowerChars = "qwertyuiopasdfghjklzxcvbnm";
+    const allChars = numberChars + upperChars + lowerChars;
+
+    let randomString = '';
+
+    for (let i = 0; i < passwordLength; i++) {
+        let randomNumber = Math.floor(Math.random() * allChars.length);
+        randomString += allChars[randomNumber];
+    }
+
+    return randomString;
+}
 }
 
 mainEl.appendChild(passwordEl); // добавляем в main: input из переменной "passwordEl"

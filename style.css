@@ -7,6 +7,7 @@
 body {
     background-color: #f1f5f8;
     font-family: "Open sans", sans-serif;
+    overflow-y: hidden;
 }
 
 .container {
@@ -71,4 +72,10 @@ body {
     left: 0;
     top: -137px;
     margin-left: 529px;
+}
+
+.pretty {
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
